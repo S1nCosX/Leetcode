@@ -1,17 +1,22 @@
+package leetcode.solutions;
+
+import leetcode.Context;
+import leetcode.Solution;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
-class SolutionBombs {
-    static int x = 0, y = 1, r = 2;
-    static boolean isIn(double[] exploded, double[] target){
+public class SolutionBombs extends Solution {
+    int x = 0, y = 1, r = 2;
+    boolean isIn(double[] exploded, double[] target){
         if (Math.pow((target[x]-exploded[x]), 2) + Math.pow((target[y]-exploded[y]), 2) <= Math.pow(exploded[r], 2))
             return true;
         return false;
     }
 
-    static int dfs(int i, List<List<Integer>> v, List used){
+    int dfs(int i, List<List<Integer>> v, List used){
         if (used.get(i).equals(1))
             return 0;
         used.set(i, 1);
@@ -21,7 +26,7 @@ class SolutionBombs {
         return ans;
     }
 
-    public static int maximumDetonation(int[][] bombs) {
+    private int solution(int[][] bombs) {
         int ans = 0;
 
         List <List <Integer>> v = new ArrayList<>();
@@ -44,5 +49,14 @@ class SolutionBombs {
                     .collect(Collectors.toList())));
 
         return ans;
+    }
+
+    @Override
+    public String solution(Context context) {
+        try {
+            return Integer.valueOf(solution((int[][]) context.getContext()[0])).toString();
+        }catch (ClassCastException e){
+            return e.getMessage();
+        }
     }
 }

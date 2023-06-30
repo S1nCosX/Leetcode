@@ -1,0 +1,30 @@
+package leetcode;
+
+public enum Task {
+    TWOSUM (1),
+    ADDTWONUMBERS (2),
+    LONGESTSUBSTRINGWITHOUTREPEATINGCHARACTERS(3),
+    ROMANTOINTEGER(13),
+    LONGESTCOMMONPREFIX(14),
+    THREESUM(15),
+    VALIDPARENTHESES(20),
+    GENERATEPARENTHESES(22),
+    VALIDPALINDROME(125),
+    SURROUNDEDREGIONS(130),
+    NUMBEROFISLANDS(200),
+    PALINDROMELINKEDLIST(234),
+    SUMOFTWOINTEGERS(371),
+    ARITHMETICSLICES(413),
+    NUMBEROFPROVINCES(547),
+    MAXAREAOFISLAND(695),
+    MATRIXDIAGONALSUM(1572),
+    DETONATEMAXIMUMBOMBS(2101),
+    NUMBEROFZEROFILEDSUBARRAYS(2348);
+    private final int taskNumber;
+    Task (int taskNumber){
+        this.taskNumber = taskNumber;
+    }
+    public int getTaskNumber() {
+        return taskNumber;
+    }
+}

@@ -1,10 +1,14 @@
-import java.util.Arrays;
+package leetcode.solutions;
+
+import leetcode.Context;
+import leetcode.Solution;
+
 import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
-public class SolutionProvinces {
-    static void dfs(int i, int[][] isConnected, List<Boolean> used){
+public class SolutionProvinces extends Solution {
+    private void dfs(int i, int[][] isConnected, List<Boolean> used){
         if(used.get(i))
             return;
         used.set(i, (Boolean) true);
@@ -13,8 +17,7 @@ public class SolutionProvinces {
                 dfs(j, isConnected, used);
         }
     }
-
-    static public int findCircleNum(int[][] isConnected) {
+    private int solution(int[][] isConnected) {
         int ans = 0;
 
         List<Boolean> used = Stream.generate(() -> false)
@@ -29,4 +32,13 @@ public class SolutionProvinces {
         }
         return ans;
     }
+    @Override
+    public String solution(Context context) {
+        try {
+            return Integer.valueOf(solution((int[][]) context.getContext()[0])).toString();
+        }catch (ClassCastException e){
+            return e.getMessage();
+        }
+    }
+
 }

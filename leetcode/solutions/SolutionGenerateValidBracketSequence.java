@@ -1,8 +1,13 @@
+package leetcode.solutions;
+
+import leetcode.Context;
+import leetcode.Solution;
+
 import java.util.*;
 
-public class SolutionGenerateValidBracketSequence {
+public class SolutionGenerateValidBracketSequence extends Solution {
 
-    static private List<String> generate(int i, int n, String s){
+    private List<String> generate(int i, int n, String s){
         List <String> ans = new ArrayList<>();
         if (i < n){
             ans.addAll(generate(i + 1, n, s + "("));
@@ -24,7 +29,15 @@ public class SolutionGenerateValidBracketSequence {
         }
         return ans;
     }
-    static public List<String> Solution(int n) {
+    private List<String> solution(int n) {
         return generate(0, n*2, "");
+    }
+    @Override
+    public String solution(Context context) {
+        try {
+            return solution((int) context.getContext()[0]).toString();
+        }catch (ClassCastException e){
+            return e.getMessage();
+        }
     }
 }

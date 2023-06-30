@@ -1,8 +1,13 @@
+package leetcode.solutions;
+
+import leetcode.Context;
+import leetcode.Solution;
+
 import java.util.ArrayList;
 import java.util.List;
 
-public class SolutionLengthOfLongestSubstring {
-    static public int lengthOfLongestSubstring(String s) {
+public class SolutionLengthOfLongestSubstring extends Solution {
+    private int solution(String s) {
         if (s.length() == 0)
             return 0;
 
@@ -19,5 +24,13 @@ public class SolutionLengthOfLongestSubstring {
         }
 
         return ans.stream().max(Integer::compare).get();
+    }
+    @Override
+    public String solution(Context context) {
+        try {
+            return Integer.valueOf(solution((String) context.getContext()[0])).toString();
+        }catch (ClassCastException e){
+            return e.getMessage();
+        }
     }
 }

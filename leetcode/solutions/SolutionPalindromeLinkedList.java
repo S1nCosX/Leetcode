@@ -1,15 +1,11 @@
-import javax.swing.plaf.synth.SynthOptionPaneUI;
+package leetcode.solutions;
 
-public class SolutionPalindrom {
-    static public boolean isPalindrome(String s) {
-        boolean flag = true;
-        s = s.replaceAll("[^a-zA-Z0-9]+", "");
-        for (int i = 0; flag && i < s.length() / 2; i++)
-            flag = (s.substring(i, i + 1).compareToIgnoreCase(s.substring(s.length() - 1 - i,s.length() - i)) == 0);
-        return flag;
-    }
+import leetcode.Context;
+import leetcode.ListNode;
+import leetcode.Solution;
 
-    public static boolean isPalindrome(ListNode head) {
+public class SolutionPalindromeLinkedList extends Solution {
+    private boolean solution(ListNode head) {
         int n = 0;
         ListNode tail = null;
         for (ListNode i = head; i != null; tail = i, i = i.next, n++);
@@ -30,5 +26,13 @@ public class SolutionPalindrom {
                 ans = false;
 
         return ans;
+    }
+    @Override
+    public String solution(Context context) {
+        try {
+            return Boolean.valueOf(solution((ListNode) context.getContext()[0])).toString();
+        }catch (ClassCastException e){
+            return e.getMessage();
+        }
     }
 }

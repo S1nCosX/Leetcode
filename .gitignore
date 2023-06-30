@@ -6,3 +6,6 @@
 /out/production/Leetcode/.idea/modules.xml
 /out/production/Leetcode/.idea/libraries/openjfx_javafx_base.xml
 /out/production/Leetcode/.idea/vcs.xml
+/out/
+/.idea/
+*/*.class

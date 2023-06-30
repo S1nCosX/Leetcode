@@ -1,10 +1,12 @@
-import javafx.util.Pair;
+package leetcode.solutions;
+
+import leetcode.Context;
+import leetcode.Solution;
 
 import java.util.*;
-import java.util.stream.Collectors;
 
-public class SolutionSum3 {
-    static public List<List<Integer>> threeSum(int[] nums) {
+public class SolutionSum3 extends Solution {
+    private List<List<Integer>> solution(int[] nums) {
         Map<Integer, Integer> mp = new HashMap<>();
         Set <List<Integer>> ans = new HashSet<>();
 
@@ -26,5 +28,13 @@ public class SolutionSum3 {
         }
 
         return new ArrayList<>(ans);
+    }
+    @Override
+    public String solution(Context context) {
+        try {
+            return solution((int[]) context.getContext()[0]).toString();
+        }catch (ClassCastException e){
+            return e.getMessage();
+        }
     }
 }

@@ -1,10 +1,14 @@
+package leetcode.solutions;
+
 import javafx.util.Pair;
+import leetcode.Context;
+import leetcode.Solution;
 
 import java.util.LinkedList;
 import java.util.Queue;
 
-public class SolutionCapture {
-    static public void solve(char[][] board) {
+public class SolutionCapture extends Solution {
+    private String solution(char[][] board) {
         boolean[][] used = new boolean[board.length][board[0].length];
 
         for (int i = 1; i < board.length - 1; i++){
@@ -81,7 +85,15 @@ public class SolutionCapture {
             }
         }
 
-        for (char[] i : board)
-            System.out.println(i);
+        return board.toString();
+    }
+
+    @Override
+    public String solution(Context context) {
+        try {
+            return solution((char[][]) context.getContext()[0]);
+        }catch (ClassCastException e){
+            return e.getMessage();
+        }
     }
 }
