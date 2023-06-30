@@ -30,3 +30,4 @@ new SolutionFlyweigth(Task.НАЗВАНИЕЗАДАЧИ).solution(Аргумен
 |               Matrix Diagonal Sum                |1572|
 |              Detonate the Maximum Bombs              |2101|
 |           Number of Zero-Filled Subarrays           |2348       |
+|Length of the Longest Alphabetical Continuous Substring|2414|

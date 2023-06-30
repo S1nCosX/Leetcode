@@ -19,7 +19,9 @@ public enum Task {
     MAXAREAOFISLAND(695),
     MATRIXDIAGONALSUM(1572),
     DETONATEMAXIMUMBOMBS(2101),
+    LENGTHOFTHELONGESTALPHABETICALCONTINUOUSSUBSTRING(2414),
     NUMBEROFZEROFILEDSUBARRAYS(2348);
+
     private final int taskNumber;
     Task (int taskNumber){
         this.taskNumber = taskNumber;
