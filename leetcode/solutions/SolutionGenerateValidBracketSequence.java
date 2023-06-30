@@ -33,11 +33,7 @@ public class SolutionGenerateValidBracketSequence extends Solution {
         return generate(0, n*2, "");
     }
     @Override
-    public String solution(Context context) {
-        try {
-            return solution((int) context.getContext()[0]).toString();
-        }catch (ClassCastException e){
-            return e.getMessage();
-        }
+    public List<String> solution(Context context) {
+        return solution((int) context.getContext()[0]);
     }
 }

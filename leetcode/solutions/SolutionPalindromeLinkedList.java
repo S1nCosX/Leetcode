@@ -28,11 +28,7 @@ public class SolutionPalindromeLinkedList extends Solution {
         return ans;
     }
     @Override
-    public String solution(Context context) {
-        try {
-            return Boolean.valueOf(solution((ListNode) context.getContext()[0])).toString();
-        }catch (ClassCastException e){
-            return e.getMessage();
-        }
+    public Boolean solution(Context context) {
+        return solution((ListNode) context.getContext()[0]);
     }
 }

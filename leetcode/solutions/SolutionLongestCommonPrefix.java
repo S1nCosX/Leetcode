@@ -26,11 +26,6 @@ public class SolutionLongestCommonPrefix extends Solution {
     }
     @Override
     public String solution(Context context) {
-        try {
             return solution((String[]) context.getContext()[0]);
-        }catch (ClassCastException e){
-            return e.getMessage();
-        }
     }
-
 }

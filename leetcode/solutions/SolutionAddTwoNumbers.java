@@ -5,7 +5,7 @@ import leetcode.ListNode;
 import leetcode.Solution;
 
 public class SolutionAddTwoNumbers extends Solution {
-    private static ListNode solution(ListNode l1, ListNode l2){
+    private ListNode solution(ListNode l1, ListNode l2){
         int n1 = 0, n2 = 0;
         for (ListNode b1 = l1; b1 != null; b1 = b1.next, n1++);
         for (ListNode b2 = l2; b2 != null; b2 = b2.next, n2++);
@@ -51,11 +51,7 @@ public class SolutionAddTwoNumbers extends Solution {
     }
 
     @Override
-    public String solution(Context context) {
-        try {
-            return solution((ListNode) context.getContext()[0], (ListNode) context.getContext()[1]).toString();
-        }catch (ClassCastException e){
-            return e.getMessage();
-        }
+    public ListNode solution(Context context) {
+           return solution((ListNode) context.getContext()[0], (ListNode) context.getContext()[1]);
     }
 }

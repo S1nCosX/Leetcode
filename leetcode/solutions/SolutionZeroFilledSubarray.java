@@ -19,11 +19,7 @@ public class SolutionZeroFilledSubarray extends Solution {
         return ans;
     }
     @Override
-    public String solution(Context context) {
-        try {
-            return Long.valueOf(solution((int[]) context.getContext()[0])).toString();
-        }catch (ClassCastException e){
-            return e.getMessage();
-        }
+    public Long solution(Context context) {
+        return solution((int[]) context.getContext()[0]);
     }
 }

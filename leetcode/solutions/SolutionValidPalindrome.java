@@ -12,12 +12,7 @@ public class SolutionValidPalindrome extends Solution {
         return flag;
     }
     @Override
-    public String solution(Context context) {
-        try {
-            return Boolean.valueOf(solution((String) context.getContext()[0])).toString();
-        }catch (ClassCastException e){
-            return e.getMessage();
-        }
+    public Boolean solution(Context context) {
+        return solution((String) context.getContext()[0]);
     }
-
 }

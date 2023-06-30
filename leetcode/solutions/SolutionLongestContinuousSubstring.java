@@ -10,12 +10,8 @@ public class SolutionLongestContinuousSubstring extends Solution {
         return ans;
     }
     @Override
-    public String solution(Context context) {
-        try {
-            return Integer.valueOf(solution((String) context.getContext()[0])).toString();
-        }catch (ClassCastException e){
-            return e.getMessage();
-        }
+    public Integer solution(Context context) {
+        return solution((String) context.getContext()[0]);
     }
 
 }

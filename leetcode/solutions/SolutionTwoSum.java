@@ -17,11 +17,7 @@ public class SolutionTwoSum extends Solution {
         return pair;
     }
     @Override
-    public String solution(Context context) {
-        try {
-            return solution((int[]) context.getContext()[0], (int) context.getContext()[1]).toString();
-        }catch (ClassCastException e){
-            return e.getMessage();
-        }
+    public int[] solution(Context context) {
+        return solution((int[]) context.getContext()[0], (int) context.getContext()[1]);
     }
 }

@@ -1,5 +1,5 @@
 package leetcode;
 
 public abstract class Solution {
-    public abstract String solution (Context context);
+    public abstract Object solution (Context context);
 }

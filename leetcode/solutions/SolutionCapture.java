@@ -90,10 +90,6 @@ public class SolutionCapture extends Solution {
 
     @Override
     public String solution(Context context) {
-        try {
-            return solution((char[][]) context.getContext()[0]);
-        }catch (ClassCastException e){
-            return e.getMessage();
-        }
+        return solution((char[][]) context.getContext()[0]);
     }
 }

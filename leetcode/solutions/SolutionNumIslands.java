@@ -46,12 +46,7 @@ public class SolutionNumIslands extends Solution {
         return ans;
     }
     @Override
-    public String solution(Context context) {
-        try {
-            return Integer.valueOf(solution((char[][]) context.getContext()[0])).toString();
-        }catch (ClassCastException e){
-            return e.getMessage();
-        }
+    public Integer solution(Context context) {
+        return solution((char[][]) context.getContext()[0]);
     }
-
 }

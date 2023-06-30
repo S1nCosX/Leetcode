@@ -5,7 +5,7 @@ import leetcode.Solution;
 
 public class SolutionError extends Solution {
     @Override
-    public String solution(Context context) throws IllegalArgumentException{
+    public Object solution(Context context) throws IllegalArgumentException{
         throw new IllegalArgumentException();
     }
 }
