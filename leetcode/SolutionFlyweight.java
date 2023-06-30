@@ -4,6 +4,7 @@ import leetcode.solutions.*;
 public class SolutionFlyweight {
     public static Solution getSolution(Task task){
         switch (task){
+            case ARITHMETICSUBARRAYS -> {return new SolutionCheckArithmeticSubarrays();}
             case LENGTHOFTHELONGESTALPHABETICALCONTINUOUSSUBSTRING -> {return new SolutionLongestContinuousSubstring();}
             case TWOSUM -> {return new SolutionTwoSum();}
             case THREESUM -> {return new SolutionSum3();}
