@@ -1,7 +1,7 @@
 package leetcode;
 
 import leetcode.solutions.*;
-public class SolutionFactory {
+public class SolutionFlyweight {
     public static Solution getSolution(Task task){
         switch (task){
             case TWOSUM -> {return new SolutionTwoSum();}
